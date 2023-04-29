@@ -1,0 +1,37 @@
+.main {
+  max-width: 1280px;
+}
+
+.menu_ingredients{
+  display: flex;
+}
+
+.buns {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  width: 600px;
+}
+
+.button_ingredient{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F2F2F3;
+  background: #131316;
+  width: 200px;
+  height: 56px;
+  border: none;
+  outline: none;
+}
+
+.button_ingredient:hover {
+  box-shadow: inset 0px -2px 0px #4C4CFF;
+}
+
+.scrollbar {
+  /* overflow: hidden; */
+  overflow-y: auto;
+  /* height: auto; */
+  /* height: 300px; */
+  flex-grow: 1;
+}

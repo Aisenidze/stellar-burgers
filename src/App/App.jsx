@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import AppHeader from '../components/AppHeader/AppHeader';
 import BurgerIngredients from '../components/BurgerIngredients/BurgerIngredients';
+import BurgerConstructor from '../components/BurgerConstructor/BurgerConstructor';
 
 function App() {
   const [error, setError] = useState(null);
@@ -13,7 +14,7 @@ function App() {
       .then(res => res.json())
       .then((result) => {
         setIsLoaded(true)
-        setItems(result)
+        setItems(result.data)
       }, 
       (error) => {
         setIsLoaded(true);
@@ -27,11 +28,15 @@ console.log(items);
     return <div>Загрузка...</div>;
   } else {
     return (
-      <div>
+      <div className='main'>
         <AppHeader/>
-        <BurgerIngredients/>
+        <div className='template'>
+          <div className='wrapper'>
+            <BurgerIngredients items={items}/>
+            <BurgerConstructor items={items}/>
+          </div>
+        </div>
       </div>
-      
     );
   }
 }

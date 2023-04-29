@@ -1,0 +1,22 @@
+.item {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  max-width: 272px;
+}
+
+/* .counter{
+  
+} */
+
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ 
+.price_content{
+  display: flex;
+  justify-content: center;
+}

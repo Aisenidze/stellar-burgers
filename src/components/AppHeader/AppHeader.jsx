@@ -4,33 +4,33 @@ import styles from './AppHeader.module.css';
 function AppHeader() {
     return (
         <header className={styles.header}>
-            <div className={styles.wrapper}>
+            <nav className={styles.wrapper}>
                 <div className={styles['header_left-content']}>
-                    <button>
-                        <div className={styles.box_items}>
+                    <button className={styles.button_header}>
+                        <div className={`${styles.box_items} pl-5 pr-5 pt-4 pb-4`}>
                             <BurgerIcon type="primary" />
                             <p>Конструктор</p>
                         </div>
                     </button>
-                    <button>
-                    <div className={styles.box_items}>
+                    <button className={styles.button_header}>
+                    <div className={`${styles.box_items} pl-5 pr-5 pt-4 pb-4`}>
                         <ListIcon type="secondary"/>
                         <p>Лента заказов</p>
                     </div>
                     </button>
                 </div>
-                <button>
+                <div>
                     <Logo />
-                </button>
+                </div>
                 <div className={styles['header_right-content']}>
-                <button>
-                    <div className={styles.box_items}>
+                <button className={styles.button_header}>
+                    <div className={`${styles.box_items} pl-5 pr-5 pt-4 pb-4`}>
                         <ProfileIcon type="primary"/>
                         <p>Личный кабинет</p>
                     </div>
                 </button>
                 </div>
-            </div>
+            </nav>
         </header>
     ) 
 }
